@@ -17,6 +17,7 @@ import { BiLoader } from "react-icons/bi";
 import LoginCard from "../../components/auth/LoginCard";
 import api from "../../utils/apiCall";
 import { toast } from "sonner";
+import logo from "../../assets/images/logo/brewscouts_logo.png";
 
 const SignUpSchema = z.object({
     username: z
@@ -51,7 +52,7 @@ export const SignUp = () => {
     const onSubmit = async (data) => {
         try {
             setLoading(true);
-            console.log(data);
+            // console.log(data);
 
             const { data: res } = await api.post("/auth/sign-up", data);
 
@@ -79,8 +80,8 @@ export const SignUp = () => {
             <div className="py-10 w-2/6 bg-white flex items-center justify-center">
                 <Card className="w-[450px] mx-auto overflow-hidden">
                     <div className="p-6 md:-8">
-                        <div className="text-3xl flex items-center justify-center py-10 font-mono font-semibold text-orange-700 bg-orange-100 mb-8 rounded">
-                            <h3>Brew Scouts</h3>
+                        <div className="flex items-center justify-center py-10 mb-8 rounded">
+                            <img src={logo} alt="" width="200" />
                         </div>
 
                         <CardHeader className="py-0">

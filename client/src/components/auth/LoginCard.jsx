@@ -19,7 +19,7 @@ const LoginCard = () => {
 
                           <p className="max-w-xl mt-3 text-white">
                               We're thrilled to see you again. Dive right in and
-                              explore the latest updates, events, and features
+                              explore the latest updates, pop-ups, and features
                               tailored just for you. Your journey continues
                               here, and we're excited to help you make the most
                               of your experience!

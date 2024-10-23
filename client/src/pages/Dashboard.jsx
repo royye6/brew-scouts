@@ -1,8 +1,12 @@
 import React from 'react'
+import NavBar from '../components/discover/NavBar'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div>
+      <NavBar />
+
+    </div>
   )
 }
 

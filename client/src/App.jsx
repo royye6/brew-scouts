@@ -28,10 +28,6 @@ const RootLayout = () => {
 function App() {
     const [count, setCount] = useState(0);
 
-    // useEffect(() => {
-    //     document.documentElement.classList.remove("dark");
-    // }, []);
-
     return (
         <main>
             <div className="w-full min-h-screen bg-white">
@@ -44,7 +40,7 @@ function App() {
                         <Route path="/pop-up" element={<PopUp />} />
                     </Route>
                 </Routes>
-                <Toaster position="top-right" richColors />
+                <Toaster position="top-center" richColors />
             </div>
         </main>
     );
