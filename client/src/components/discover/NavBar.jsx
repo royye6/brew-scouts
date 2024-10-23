@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 
 const NavBar = () => {
     return (
-        <div className="bg-blue-100 w-full h-content p-4 flex flex-col gap-5">
+        <div className="w-full h-content p-4 flex flex-col gap-5 md:gap-4">
             <NavElements />
             <SearchBar />
         </div>

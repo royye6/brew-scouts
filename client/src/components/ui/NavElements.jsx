@@ -4,6 +4,7 @@ import useStore from "../../store/index.mjs";
 import logo from "../../assets/images/logo/brewscouts_logo.png";
 import { useEffect } from "react";
 import { toast } from "sonner";
+import SearchBar from "../discover/SearchBar";
 
 const NavElements = () => {
     const { signOut } = useStore((state) => state);
@@ -25,12 +26,13 @@ const NavElements = () => {
     }, [handleSignOut]);
 
     return (
-        <div className="flex justify-between items-center w-full ">
+        <div className="flex justify-between items-center w-full">
             <div className="w-content h-content flex-none">
                 <Link to="/">
                     <img src={logo} alt="" width="200" />
                 </Link>
             </div>
+            {/* <SearchBar className="" /> */}
             <div className="font-serif flex justify-center items-center">
                 <Link
                     to="#"

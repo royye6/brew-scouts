@@ -16,6 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1", router);
 
+app.use("/", (req, res) => {
+    return res.json({ message: "The app is running"})
+})
+
 app.use("*", (req, res) => {
     return res.status(404).json({
         status: "404 Not Found",
