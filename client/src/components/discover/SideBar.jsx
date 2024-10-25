@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import SideBarMenu from "../ui/SideBarMenu";
 
 const SideBar = () => {
-  return (
-    <div>SideBar</div>
-  )
-}
+    return (
+        <div className="flex-wrap">
+            <h2 className="text-xl font-semibold mb-5">Dashboard</h2>
+            <SideBarMenu />
+        </div>
+    );
+};
 
-export default SideBar
+export default SideBar;

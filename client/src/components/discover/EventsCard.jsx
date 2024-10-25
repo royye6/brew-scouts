@@ -1,6 +1,7 @@
 import React from "react";
 import CardImage from "../ui/CardImage";
 import CardInfo from "../ui/CardInfo";
+import FavouriteButton from "../ui/FavouriteButton";
 
 const EventsCard = () => {
     return (

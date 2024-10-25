@@ -42,6 +42,7 @@ export const SignIn = () => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
 
+    // Navigate to home after authentication
     useEffect(() => {
         user && navigate("/");
     }, [user]);
@@ -155,3 +156,4 @@ export const SignIn = () => {
 };
 
 export default SignIn;
+

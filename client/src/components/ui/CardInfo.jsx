@@ -1,4 +1,5 @@
 import React from "react";
+import FavouriteButton from "../ui/FavouriteButton";
 
 
 const CardInfo = ({
@@ -8,7 +9,7 @@ const CardInfo = ({
     promotion = "free",
 }) => {
     return (
-        <ul className="flex flex-col px-2 flex-grow gap-1 text-sm max-sm:mt-2">
+        <ul className="flex flex-col px-2 flex-grow gap-1 text-sm max-sm:mt-2 bg-slate-500">
             <li className="text-xl text-slate-800 font-bold">
                 <h4>{name}</h4>
             </li>
@@ -24,6 +25,7 @@ const CardInfo = ({
             <li className="font-serif">
                 <p>by Brew Scouts</p>
             </li>
+            <FavouriteButton />
         </ul>
     );
 };
