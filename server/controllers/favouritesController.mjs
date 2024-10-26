@@ -6,7 +6,7 @@ export const getFavourites = async (req, res) => {
         const { userId } = req.body.user;
 
         const allFavourites = await pool.query({
-            text: "SELECT * FROM favourites WHERE user_id = $1",
+            text: "SELECT f.id, f.user_id, f.event_id, f.created_at, e.name AS event_name FROM favourites f JOIN events e ON f.event_id = e.id WHERE f.user_id = $1",
             values: [userId],
         });
 
@@ -56,7 +56,7 @@ export const newFavourite = async (req, res) => {
                 });
             }
 
-            const newFavourite = createNewFavourite.rows
+            const newFavourite = createNewFavourite.rows;
 
             return res.status(201).json({
                 status: "Success",
@@ -76,7 +76,7 @@ export const newFavourite = async (req, res) => {
     }
 };
 
-export const getFavourite= async (req, res) => {
+export const getFavourite = async (req, res) => {
     try {
         const favourite = req.favourite;
 

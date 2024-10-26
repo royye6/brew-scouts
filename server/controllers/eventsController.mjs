@@ -3,10 +3,16 @@ import { matchedData, validationResult } from "express-validator";
 
 export const getEvents = async (req, res) => {
     try {
+        const location = req.query.location
+        const searchTerm = req.query.search
+
+        console.log(`location: ${location}, search-term: ${searchTerm}`)
+
         const allEvents = await pool.query({
-            text: "SELECT * FROM events",
-            values: [],
+            text: "SELECT * FROM events WHERE location ILIKE $1 AND (name ILIKE $2 OR description ILIKE $2)",
+            values: [`%${location}%`, `%${searchTerm}%`],
         });
+
 
         if (!allEvents) {
             return res.status(404).json({

@@ -4,7 +4,7 @@ import SideBarMenu from "../ui/SideBarMenu";
 const SideBar = () => {
     return (
         <div className="flex-wrap">
-            <h2 className="text-xl font-semibold mb-5">Dashboard</h2>
+            <h2 className="text-xl  mb-5">Dashboard</h2>
             <SideBarMenu />
         </div>
     );

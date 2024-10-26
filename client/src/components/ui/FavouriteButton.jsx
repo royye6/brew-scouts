@@ -10,7 +10,7 @@ const FavouriteButton = () => {
     };
 
     return (
-        <div className=" flex justify-end text-2xl bg-yellow-300 outline-none">
+        <div className=" flex justify-end text-2xl  outline-none">
             <button className="outline-none" onClick={handleToggle}>{isToggle ? <AiFillHeart /> : <AiOutlineHeart />}</button>
         </div>
     );

@@ -68,7 +68,7 @@ const SideBarMenu = () => {
     return (
         <div className="bg-white">
             <button
-                className="pl-2 font-semibold mb-5 flex items-center gap-3 outline-none"
+                className="pl-2  mb-5 flex items-center gap-3 outline-none"
                 onClick={handleToggle}
             >
                 Favourites
@@ -93,7 +93,7 @@ const SideBarMenu = () => {
                             className="flex gap-1 justify-between items-center"
                         >
                             <a href="">
-                                <p className="truncate-32 font-extralight hover:text-orange-700">
+                                <p className="truncate-32 text-slate-700 hover:text-orange-700">
                                     {item.event_name}
                                 </p>
                             </a>
