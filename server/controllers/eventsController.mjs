@@ -10,7 +10,7 @@ export const getEvents = async (req, res) => {
 
         const allEvents = await pool.query({
             text: "SELECT * FROM events WHERE location ILIKE $1 AND (name ILIKE $2 OR description ILIKE $2)",
-            values: [`${location}`, `${searchTerm}`],
+            values: [`%${location}%`, `%${searchTerm}%`],
         });
 
 
